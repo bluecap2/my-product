@@ -1,5 +1,8 @@
 package com.example.demo;
 
+/*
+* EVENT
+* */
 public class ProductChanged {
     String eventType;
     Long productId;

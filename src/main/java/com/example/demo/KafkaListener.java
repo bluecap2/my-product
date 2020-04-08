@@ -16,6 +16,7 @@ public class KafkaListener {
     @StreamListener(Processor.INPUT) //자동으로 yaml에서 input의 topic이 뭔지 확인해서 설정함
     public void onEventByString(@Payload OrderPlaced orderPlaced){
 
+        //원하는 이벤트만 걸러서 처리하기 위함.
         if("OrderPlaced".equals(orderPlaced.getEventType())){
             System.out.println("======================= Listner ======================");
             //System.out.println(orderPlaced);
