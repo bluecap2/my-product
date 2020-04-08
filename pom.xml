@@ -57,6 +57,7 @@
 
 	</dependencies>
 
+	<!-- org.springframework.cloud 는 따로 dependency management를 추가해야함 -->
 	<dependencyManagement>
 		<dependencies>
 			<dependency>

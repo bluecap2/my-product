@@ -13,7 +13,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.PostPersist;
 
-@Entity //엔티티 Aggregate 선언하는 태그
+@Entity //엔티티 Aggregate 선언하는 태그 -> Entity가 정의 되어있어야 Repository에서 사용 가능
 public class Product {
     @Id @GeneratedValue //JPA PK값으로 사용 한다는 태그
     Long id;
@@ -29,6 +29,7 @@ public class Product {
         ObjectMapper objectMapper = new ObjectMapper();
         String json = null;
 
+        //JSON으로 변환
         try {
             json = objectMapper.writeValueAsString(productChanged);
         } catch (JsonProcessingException e) {

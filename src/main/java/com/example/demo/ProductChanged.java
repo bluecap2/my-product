@@ -1,7 +1,7 @@
 package com.example.demo;
 
 /*
-* EVENT
+* EVENT 명칭을 클래스로 만들고 JSON으로 변환되었을 때 event Type으로 골라낼 수 있게 클래스명을 이벤트타입으로 생성
 * */
 public class ProductChanged {
     String eventType;
